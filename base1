@@ -16,14 +16,20 @@ EDE = random.randint(1,4)
 ESP = 0
 gate = "false"
 BChance = random.randint(1,10)
-loot = random.randint(1,3)
-Copper Sword = False
-z = Copper Sword
+#luck value
+loot = random.randint(1,100)
+#items
+CopperSword = False
+GoldSword = False
+GreatSword = False
+#item IDS
+z = "Copper Sword"
+zx = "Gold Sword"
+zxz = "Great Sword"
+#item info
 zInfo = "Its rusted so badly its older than you! \nYou would be better off using your fist....."
-Gold Sword = False
-zx = Gold Sword 
-juice = False
-zxz = juice
+zxInfo = "Made of pure gold and shines like new!"
+zxzInfo = "It weights a ton!"
 
 q = input("What class do you want? \nWalkling \nParting")
 if "walkling" in q:
@@ -56,4 +62,10 @@ if "right" in temp:
     print("You ran into a chest! \nThe chest sealed shut, but still openable....")
     chest1 = input("Open it?:")
 if "yes" in chest1:
-    
+    print("you open the chest....")
+    if loot == 50:
+        print("You got a " + zxz + "!")
+        GreatSword = True
+else:
+    print("You got a " + z + "!")
+    CopperSword = True
