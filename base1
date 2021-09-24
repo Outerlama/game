@@ -9,18 +9,21 @@ BHP = 0
 BAT = 0
 BDE = 0
 BSP = 0
+#Easy
+EHP = random.randint(5,7)
+EAT = random.randint(4,6)
+EDE = random.randint(1,4)
+ESP = 0
 gate = "false"
 BChance = random.randint(1,10)
-
-#pryimand head
-def SpecialBoss1():
-    BHP = 85
-    BAT = 120
-    BDE = 35
-    BSP = 0
-    print("Your actions long for punishment!")
-
-    
+loot = random.randint(1,3)
+Copper Sword = False
+z = Copper Sword
+zInfo = "Its rusted so badly its older than you! \nYou would be better off using your fist....."
+Gold Sword = False
+zx = Gold Sword 
+juice = False
+zxz = juice
 
 q = input("What class do you want? \nWalkling \nParting")
 if "walkling" in q:
@@ -49,5 +52,8 @@ if "parting" in q:
 
 if "true" in gate:
     temp = input("What do you want to do? \nGo left \nGo right \nInventory")
-if "left" in temp:
+if "right" in temp:
+    print("You ran into a chest! \nThe chest sealed shut, but still openable....")
+    chest1 = input("Open it?:")
+if "yes" in chest1:
     
