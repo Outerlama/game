@@ -1,0 +1,53 @@
+import random
+#Player stats
+HP = 0 
+ATT = 0
+DEF = 0
+SPE = 0 
+#Boss stats
+BHP = 0
+BAT = 0
+BDE = 0
+BSP = 0
+gate = "false"
+BChance = random.randint(1,10)
+
+#pryimand head
+def SpecialBoss1():
+    BHP = 85
+    BAT = 120
+    BDE = 35
+    BSP = 0
+    print("Your actions long for punishment!")
+
+    
+
+q = input("What class do you want? \nWalkling \nParting")
+if "walkling" in q:
+    HP = 9
+    ATT = 7
+    DEF = 6
+    SPE = 1
+    print("You have choosen the walkling...")
+    print(HP)
+    print(ATT)
+    print(DEF)
+    print(SPE)
+    gate = "true"
+
+if "parting" in q:
+    HP = 1
+    ATT = 999
+    DEF = 1
+    SPE = 2
+    print("You have choosen the parting...")
+    print(HP)
+    print(ATT)
+    print(DEF)
+    print(SPE)
+    gate = "true"
+
+if "true" in gate:
+    temp = input("What do you want to do? \nGo left \nGo right \nInventory")
+if "left" in temp:
+    
