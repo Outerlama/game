@@ -57,15 +57,11 @@ if "parting" in q:
     gate = "true"
 
 if "true" in gate:
-    temp = input("What do you want to do? \nGo left \nGo right \nInventory")
-if "right" in temp:
+    Turn1 = input("What do you want to do? \nGo left \nGo right \nInventory")
+if "right" in Turn1:
     print("You ran into a chest! \nThe chest sealed shut, but still openable....")
     chest1 = input("Open it?:")
 if "yes" in chest1:
     print("you open the chest....")
-    if loot == 50:
-        print("You got a " + zxz + "!")
-        GreatSword = True
-else:
     print("You got a " + z + "!")
     CopperSword = True
