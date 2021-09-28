@@ -14,7 +14,10 @@ EHP = random.randint(5,7)
 EAT = random.randint(4,6)
 EDE = random.randint(1,4)
 ESP = 0
+#travel stats
 gate = "false"
+left1 = False
+#???
 BChance = random.randint(1,10)
 #luck value
 loot = random.randint(1,100)
@@ -58,6 +61,10 @@ if "parting" in q:
 
 if "true" in gate:
     Turn1 = input("What do you want to do? \nGo left \nGo right \nInventory")
+if "left" in Turn1:
+    print("Vines block the way...")
+    left1 = True
+    Turn1 = input("What do you want to do? \nGo left \nGo right \nInventory")
 if "right" in Turn1:
     print("You ran into a chest! \nThe chest sealed shut, but still openable....")
     chest1 = input("Open it?:")
@@ -65,3 +72,9 @@ if "yes" in chest1:
     print("you open the chest....")
     print("You got a " + z + "!")
     CopperSword = True
+    if left1 is True:
+        print("Mabye now i can cut those vines!")
+        Turn1 = input("What do you want to do? \nGo left \nGo right \nInventory")
+    elif left1 is False:
+        print("You head out of the dusty old cave...")
+
