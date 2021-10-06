@@ -1,0 +1,32 @@
+import random
+#Player stats
+HP = 0 
+ATT = 0
+DEF = 0
+SPE = 0 
+#Easy stats
+BHP = random.randint(5,10)
+BAT = random.randint(3,7)
+BDE = random.randint(1,3)
+BSP = random.randint(0,1)
+#Special
+op = "Easy, Medium, Hard"
+admin = False
+#Modifers
+ModChance = random.randint(1,100)
+Small = False 
+Large = False
+#EasyBossNames
+ENChance = random.randint(1,1)
+EN1 = "slime"
+EN2 = "snake"
+EN3 = "Jyinxy"
+
+print(op)
+fight = input("What mode do you want?: ")
+
+if "easy" in fight:
+    if ENChance == 1:
+        print("\nA wild " + EN1 + " appears! ")
+        A1 = input("|Attack| |Defend| |Stats|")
+        
