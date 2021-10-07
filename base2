@@ -1,23 +1,26 @@
 import random
 #Player stats
-HP = 0 
-ATT = 0
-DEF = 0
-SPE = 0 
+HP = 10
+ATT = 5
+DEF = 3
+SPE = 0
 #Easy stats
-BHP = random.randint(5,10)
-BAT = random.randint(3,7)
-BDE = random.randint(1,3)
-BSP = random.randint(0,1)
+EHP = random.randint(5,10)
+EAT = random.randint(3,7)
+EDE = random.randint(1,3)
+ESP = random.randint(0,1)
 #Special
 op = "Easy, Medium, Hard"
+active1 = False
+active2 = False
+active3 = False
 admin = False
 #Modifers
 ModChance = random.randint(1,100)
 Small = False 
 Large = False
 #EasyBossNames
-ENChance = random.randint(1,1)
+ENChance = 1
 EN1 = "slime"
 EN2 = "snake"
 EN3 = "Jyinxy"
@@ -25,8 +28,24 @@ EN3 = "Jyinxy"
 print(op)
 fight = input("What mode do you want?: ")
 
-if "easy" in fight:
-    if ENChance == 1:
+if "easy" in fight: # entrance for the easy bosses
+    if ENChance == 1: 
         print("\nA wild " + EN1 + " appears! ")
-        A1 = input("|Attack| |Defend| |Stats|")
+        active1 = True
+    if ENChance == 2:
+        print("\nA wild " + EN2 + " appears! ")
+        active2 = True
+    if ENChance == 3:
+        print("\nA wild " + EN3 + " appears! ")
+        active3 = True
+
+if active1 == True:
+    q1 = input("|Attack| |Defend| |Stats|")
+    if "attack" in q1:
+        dmg1 = random.randint(0,ATT)
+        print("You swing at the " + EN1 + " for",dmg1,"damage!")
+        EHP = EHP - dmg1 
+        print (EHP)
+        
+    
         
