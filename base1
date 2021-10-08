@@ -16,12 +16,14 @@ active1 = False # DO NOT REMOVE
 active2 = False # DO NOT REMOVE
 active3 = False # DO NOT REMOVE
 admin = False # Forgot what this does
+Pturn = True
+Mturn = False
 #Modifers
 ModChance = random.randint(1,100)
 Small = False 
 Large = False
 #EasyBossNames
-ENChance = random.randint(1,2)
+ENChance = random.randint(1,3)
 EN1 = "slime"
 EN2 = "snake"
 EN3 = "Jyinxy"
@@ -60,4 +62,22 @@ if active2 == True:
         EHP = EHP - dmg1 
         print("The " + EN1 + " is now at",EHP,"HP!")
         
-    
+if active3 == True:
+    if Dev == True:
+        print(EHP,EAT,EDE,ESP)
+    q1 = input("|Attack| |Defend| |Stats|")
+    if "attack" in q1:
+        dmg1 = random.randint(0,ATT)
+        print("You swing at the " + EN3 + " for ",dmg1,"damage!")
+        EHP = EHP - dmg1 
+        print("The " + EN1 + " is now at",EHP,"HP!")
+        Pturn = False
+
+if Pturn == False:
+    q = input()
+
+
+if Mturn  == True
+
+
+
